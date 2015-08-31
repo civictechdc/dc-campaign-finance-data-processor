@@ -1,0 +1,12 @@
+<header>
+  <h1>Grouping: {{ grouping }}</h1>
+  <h1>Address: {{ grouping.address }}</h1>
+</header>
+<section>
+  <h4>Records</h4>
+  <form action="{% url 'submit' %}" method="post">
+    {% for record in records %}
+      {{ record.name }}
+    {% endfor %}
+  </form>
+</section>
